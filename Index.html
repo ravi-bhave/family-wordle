@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Family Wordle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <!-- Home screen icon and name (this is what iPhone reads on "Add to Home Screen") -->
+  <link rel="apple-touch-icon" href="icon-180.png">
+  <link rel="icon" type="image/png" href="icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="apple-mobile-web-app-title" content="Family Wordle">
+
+  <!-- Open full screen (no Safari bars) when launched from the home screen -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#121213">
+
+  <style>
+    html, body { margin: 0; height: 100%; background: #121213; }
+    /* The Apps Script app fills the whole screen. The padding keeps it clear
+       of the iPhone notch and home bar. */
+    iframe {
+      position: fixed; inset: 0;
+      width: 100%; height: 100%;
+      border: 0;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+      box-sizing: border-box;
+      background: #121213;
+    }
+  </style>
+</head>
+<body>
+  <!-- PASTE YOUR APPS SCRIPT WEB APP LINK between the quotes below.
+       It looks like https://script.google.com/macros/s/XXXX/exec -->
+  <iframe
+    src="https://script.google.com/macros/s/AKfycbwq2wYyI7brV82srP8oZGbNOdbyz1BunWsNCwMUdhyPaC4kgvCIvf9lhVjMnGqk-T37lw/exec"
+    title="Family Wordle"
+    allow="clipboard-write"></iframe>
+</body>
+</html>
